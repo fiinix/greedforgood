@@ -1,0 +1,46 @@
+/* ==========================================================================
+   
+
+   Viewport
+
+
+   ========================================================================== */
+
+
+
+.viewport {
+
+	width: 100%;
+
+	// min-height: 90%;
+	// min-height: 90vh;
+
+	display: flex;
+	flex-direction: column;
+	
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+	// z-index: z("banner", "base");
+
+	&--fullheight {
+
+		height: 100vh;
+
+	}
+
+	.group {
+
+		// position: relative;
+		// z-index: z("banner", "content");
+
+	}
+
+	@include mq($breakpoint-lap) {
+
+		padding: 6em 0;
+
+	};
+
+}

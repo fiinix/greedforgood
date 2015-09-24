@@ -1,0 +1,192 @@
+/*
+ * ===========================================================================
+ *
+ * Web in the Woods | Slides
+ *
+ * ===========================================================================
+ *
+ * Trello: https://trello.com/c/njgo59lS
+ *
+ */
+
+
+
+/*
+ * ===========================================================================
+ *
+ * Box-model
+ *
+ * ===========================================================================
+ *
+ * The box-model is set on the `HTML` element and is inherited by everything
+ * else. This way you can change the box-model on a per-component basis by
+ * changing it for the parent element and its children will inherit the right
+ * box-model.
+ */
+$box-sizing:						border-box;
+
+
+
+/*
+ * ===========================================================================
+ *
+ * Breakpoints
+ *
+ * ===========================================================================
+ *
+ * Breakpoints should conform to human metrics because devices come and go.
+ *
+ * The measurments presented here are only for guidance and should be updated
+ * to reflect the design/content needs.
+ *
+ */
+$breakpoint-wrist:					321;
+$breakpoint-palm:					481;
+$breakpoint-lap:					641;
+$breakpoint-desk:					1025;
+$breakpoint-wall:					1201;
+$breakpoint-mall:					1367;
+
+
+
+/*
+ * ===========================================================================
+ *
+ * Paths
+ *
+ * ===========================================================================
+ *
+ */
+$img-path:							"/assets/images/";
+$font-path:							"/assets/fonts/";
+$svg-path:							"/assets/svg/";
+
+
+
+/*
+ * ===========================================================================
+ *
+ * Typography
+ *
+ * ===========================================================================
+ *
+ */
+$font-size:							24;
+$font-leading:						1.4;
+
+$font-style:						normal;
+
+$font-weight:						400;
+$font-family:						"Georgia", serif;
+
+$heading-family:					"Oxygen", sans-serif;
+$heading-weight:					700;
+
+$emphasis-weight:					700;
+$emphasis-family:					$font-family;
+
+
+/*
+ * ===========================================================================
+ *
+ * Palette
+ *
+ * ===========================================================================
+ *
+ */
+/*
+ * Namespaced colors
+ */
+$fun-green:							#016D39;
+$crimson:							#cd0e3e;
+$bronze:							#bca281;
+$scorpion:							#CFE533;
+
+
+$tealhtml: #008080;
+$darkTeal:	#287BA4;
+
+/*
+ * Sass variables
+ */
+$primary-color:						$fun-green;
+$secondary-color:					$crimson;
+$tertiary-color:					$bronze;
+$accent-color:						$scorpion;
+
+$white:								#f3f3f3;
+$black:								#2a2a2a;
+
+$off-white:							#f3f3f3;
+
+$luma-90:							mix($white, $black, 90%);
+$luma-80:							mix($white, $black, 80%);
+$luma-70:							mix($white, $black, 70%);
+$luma-60:							mix($white, $black, 60%);
+$luma-50:							mix($white, $black, 50%);
+$luma-40:							mix($white, $black, 40%);
+$luma-30:							mix($white, $black, 30%);
+$luma-20:							mix($white, $black, 20%);
+$luma-10:							mix($white, $black, 10%);
+
+$deviate:							10;
+
+
+
+/*
+ * ===========================================================================
+ *
+ * Z-index map
+ *
+ * ===========================================================================
+ *
+ */
+$z-index-map: (
+	"header":						100,
+	"nav": (
+		"base":						200,
+		"toggle":					210,		
+	),
+	"banner": (
+		"base":						20,
+		"overlay":					21,
+		"diamond":					22,
+		"content":					23,
+	)
+);
+
+
+
+/*
+ * ===========================================================================
+ *
+ * Border
+ *
+ * ===========================================================================
+ *
+ */
+$border-style:						solid;
+$border-width:						1px;
+$border-color:						$white;
+
+$border: $border-width $border-style $border-color;
+
+/*
+ * ===========================================================================
+ *
+ * Transitions
+ *
+ * ===========================================================================
+ *
+ */
+/*
+ * Named effects
+ */
+$bounce:							cubic-bezier(.64,.57,.67,1.53);
+
+
+
+$transition-property-default: 		all;
+$transition-duration-default: 		150ms;
+$transition-timing-default: 		$bounce;
+$transition-delay-default: 			0ms;

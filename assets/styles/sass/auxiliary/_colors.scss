@@ -1,0 +1,100 @@
+/*
+ * ===========================================================================
+ *
+ * Colors
+ *
+ * ===========================================================================
+ *
+ */
+.primary-bg,
+.secondary-bg,
+.tertiary-bg,
+.accent-bg {
+
+		a {
+		color: inherit;
+
+		&:visited {
+			color: inherit;
+		}
+
+		@include state{
+			color: inherit;
+		};
+	}
+
+}
+
+.on-dark {
+
+	color: contrast($black);
+
+}
+
+.on-light {
+
+	color: contrast($white);
+
+}
+
+.bg--primary {
+	background-color: $primary-color;
+	color: contrast($primary-color);
+
+	// margin-bottom: $font-leading*2 +em;
+}
+
+.bg--secondary {
+	background-color: $secondary-color;
+	color: contrast($secondary-color);
+
+	// margin-bottom: $font-leading*2 +em;
+}
+
+.bg--tertiary {
+	background-color: $tertiary-color;
+	color: contrast($tertiary-color);
+
+	// margin-bottom: $font-leading*2 +em;
+}
+
+.bg--accent {
+	background-color: $accent-color;
+	color: contrast($accent-color);
+
+	// margin-bottom: $font-leading*2 +em;
+}
+
+.bg--grey {
+	background-color: $luma-50;
+	color: contrast($luma-50);
+}
+
+.bg--offwhite {
+	background-color: $off-white;
+	color: contrast($off-white);
+}
+
+.bg--white {
+	
+	background-color: $white;
+	color: contrast($white);
+
+}
+
+.bg--noise {
+
+	background-image: url(#{$img-path}noise-50.png);
+
+}
+
+.primary-color { color: $primary-color; }
+.secondary-color { color: $secondary-color; }
+.tertiary-color { color: $tertiary-color; }
+
+
+
+.luma-50 {
+	background-color: $luma-70;
+	color: contast($luma-70);
+}

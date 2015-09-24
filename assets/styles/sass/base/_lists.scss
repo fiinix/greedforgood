@@ -1,0 +1,120 @@
+/*
+ * ===========================================================================
+ *
+ * Lists
+ *
+ * ===========================================================================
+ *
+ */
+ul, ol, dl {
+
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+
+}
+.unordered-list {
+
+
+	// display: table;
+	list-style: none;
+	margin: 0;
+	margin-bottom: $font-leading*2 +rem;
+	padding: 0;
+
+	li {
+		
+		display: table-row;
+		break-inside: avoid;
+
+		&:before {
+			// @extend %icon;
+			// @extend %icon-check;
+
+			display: table-cell !important;
+			// height: 1.28em;
+			// line-height: 1.28;
+
+			// background-color: $primary-color;
+			// border-radius: 50%;
+			
+			color: $tertiary-color;
+			padding-right: .75em;
+			// margin-right: 0.75em;
+
+		}
+		/* Can't add margins to table-cell containers, set it on pseudo
+		 * element instead.
+		 */
+		&:after {
+			content: " ";
+			display: block;
+			margin-bottom: 1em;
+		}
+
+	}
+}
+.ordered-list {
+	
+	// display: table;
+	list-style: none;
+	margin: 0 0 1.5em 0;
+	padding: 0;
+
+	counter-reset: orderedList;
+
+	li {
+		
+		display: table-row;
+		counter-increment: orderedList;
+
+		&:before {
+			display: table-cell;
+
+			content: counter(orderedList) ".";
+
+			text-align: right;
+
+			padding-right: .75em;
+		}
+		/* Can't add margins to table-cell containers, set it on pseudo
+		 * element instead.
+		 */
+		&:after {
+			content: " ";
+			display: block;
+			margin-bottom: 1em;
+		}
+
+	}
+}
+.inline-list {
+
+	list-style: none;
+	padding: 0;
+
+	li {
+		display: inline;
+
+		&:before,
+		&:after {
+			content: none;
+		}
+	}
+
+}
+.clean-list {
+	
+	/* tables don't take up as much space as they should */
+	display: block;
+
+	li {
+		display: block;
+		// margin-bottom: 0.5em;
+	}
+
+	li:before,
+	li:after {
+		content: none;
+	}
+}

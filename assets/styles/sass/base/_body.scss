@@ -1,0 +1,45 @@
+/* ==========================================================================
+   
+
+   Body
+
+
+   ========================================================================== */
+html { height: 100%; }
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    // To prevent unwanted horizontal scrolling
+    overflow-x: hidden;
+
+    font-size: percentage($font-size/16);
+}
+
+body {
+	width: 100%;
+
+	background: $white;
+	color: contrast($white);
+
+	font-style: $font-style;
+	font-weight: $font-weight;
+	font-size: 1em;
+	font-family: $font-family;
+	line-height: 1.4;
+
+    @include mq($breakpoint-lap) {
+
+        line-height: $font-leading;
+
+    };
+    
+}
+
+.container {
+    width: 100%;
+    max-width: em($breakpoint-mall);
+    margin: 0 auto;
+    position: relative;
+}

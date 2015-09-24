@@ -1,0 +1,154 @@
+/*
+ * ===========================================================================
+ *
+ * Flexbox
+ *
+ * ===========================================================================
+ *
+ */
+
+
+/* Flex parent
+   ========================================================================== */
+.group {
+
+	width: 100%;
+    max-width: em($breakpoint-wall);
+    margin: 0 auto;
+
+	@include mq($breakpoint-lap) {
+	
+	display: flex;
+	flex-direction: row;
+
+	display: table\9; /* Fallback for IE6-9 */
+	table-layout: fixed\9; /* Fallback for IE6-9 */
+
+	}
+}
+
+.group--column {
+
+	flex-direction: column;
+
+}
+
+.group--row {
+
+	flex-direction: row;
+
+}
+
+.group--end {
+
+	justify-content: flex-end;
+	align-items: flex-end;
+
+}
+
+.group--island {
+
+	margin: 0 0 3rem 0;
+
+	/**
+	 * Flex
+	 *
+	 * Shorthand for flex-grow, flex-shrink and flex-basis.
+	 * Default value is `0 1 auto`
+	 *
+	 * @flex
+	 *
+	 */
+	flex: 0 1 auto;
+
+}
+
+/* FLex children
+   ========================================================================== */
+.group__item {
+	
+	/**
+	 * Flex
+	 *
+	 * Shorthand for flex-grow, flex-shrink and flex-basis.
+	 * Default value is `0 1 auto`
+	 *
+	 * @flex
+	 *
+	 */
+	flex: 1;
+
+	// padding-top: 1.5em;
+	// padding-bottom: 1.5em;
+
+	padding-right: 0.75em;
+	padding-left: 0.75em;
+
+	margin-top: 1.5em;
+
+	@include mq($breakpoint-lap) {
+
+		display: table-cell\9; /* Fallback for IE6-9 */
+		width: 2%\9; /* Fallback for IE6-9 */
+
+		margin-top: 0;
+
+		padding-right: 3em;
+		padding-left: 3em;
+
+		max-width: 66ch;
+
+	};
+
+}
+
+
+
+// [class~="flex-1"] { flex: 1; }
+// [class~="flex-2"] { flex: 2; }
+// [class~="flex-3"] { flex: 3; }
+// [class~="flex-4"] { flex: 4; }
+// [class~="flex-5"] { flex: 5; }
+// [class~="flex-6"] { flex: 6; }
+// [class~="flex-7"] { flex: 7; }
+// [class~="flex-8"] { flex: 8; }
+// [class~="flex-9"] { flex: 9; }
+
+.group__item--wrap {
+
+	flex: 0 1 auto;
+
+}
+/* flex-basis should be unit-less but because of a browsers bug in IE10-11
+ * (where it ignores unit-less flex-basis shorthand) we instead declare it
+ * as `0%`, which prevents minifiers from turning it into `0` (for some reason)
+ *
+ * REF: http://philipwalton.com/articles/normalizing-cross-browser-flexbox-bugs/
+ */
+.group__item--space {
+
+	flex: 0 1 0%;
+
+}
+
+
+/* Special golden ratio split two columns
+   ========================================================================== */
+.group__item--primary {
+
+	flex: 1.618;
+
+}
+
+
+
+.sort-first-from-lap {
+	@include mq($breakpoint-lap) {
+		order: -1;
+	}
+}
+.sort-last-from-lap {
+	@include mq($breakpoint-lap) {
+		order: 99;
+	}
+}

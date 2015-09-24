@@ -1,0 +1,33 @@
+/*
+ * ===========================================================================
+ *
+ * Island
+ *
+ * ===========================================================================
+ *
+ * The island object is used when content demans its own screen presence.
+ */
+.island {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: em(52);
+
+    @include mq($breakpoint-lap) {
+        padding: em(104);
+    };
+    
+}
+.island__container {
+    width: 100%;
+    max-width: em($breakpoint-mall);
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    @include mq($breakpoint-lap) {
+        
+        text-align: left;
+    }
+
+}

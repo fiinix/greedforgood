@@ -1,0 +1,178 @@
+/*
+ * ===========================================================================
+ *
+ * Buttons
+ *
+ * ===========================================================================
+ *
+ */
+.button {
+
+	text-decoration: none;
+	border: 0;
+
+	display: inline-block;
+
+	background-color: $luma-50;
+	color: contrast($luma-50);
+
+	// font-weight: $emphasis-weight;
+	// text-transform: uppercase;
+	// letter-spacing: 0.02em;
+
+	padding: 1em 2em;
+	margin: 0 0.5em 0.5em 0;
+
+	// border-radius: 0.33em;
+
+	position: relative;
+
+	&:visited {
+
+		// background-color: $luma-50;
+		color: contrast($luma-50);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		text-decoration: none;
+		color: contrast($luma-60);
+		
+		// animation: horizontal-stretch 150ms ease-in-out 1 alternate;
+
+	}
+
+}
+
+
+
+.button--primary {
+	
+	background-color: transparent;
+	color: contrast($white);
+
+	margin: 0;
+
+	&:visited {
+
+		background-color: transparent;
+		color: contrast($white);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+	
+	background-color: darken($white, $deviate);
+	color: contrast(darken($white, $deviate));
+
+	}
+
+}
+
+
+.button--secondary {
+	
+	background-color: $secondary-color;
+	color: contrast($secondary-color);
+
+	&:visited {
+
+		background-color: $secondary-color;
+		color: contrast($secondary-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+	
+	background-color: (lighten($secondary-color, $deviate));
+	color: contrast(lighten($secondary-color, $deviate));
+
+	}
+
+}
+
+
+.button--tertiary {
+	
+	background-color: $tertiary-color;
+	color: contrast($tertiary-color);
+
+	&:visited {
+
+		background-color: $tertiary-color;
+		color: contrast($tertiary-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+	
+	background-color: (lighten($tertiary-color, $deviate));
+	color: contrast(lighten($tertiary-color, $deviate));
+
+	}
+
+}
+
+
+.button--accent {
+	
+	background-color: $accent-color;
+	color: contrast($accent-color);
+
+	&:visited {
+
+		background-color: $accent-color;
+		color: contrast($accent-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+	
+	background-color: (lighten($accent-color, $deviate));
+	color: contrast(lighten($accent-color, $deviate));
+
+	}
+
+}
+
+
+
+.button--ghost {
+	
+	background-color: transparent;
+	color: inherit;
+
+	border: 2px solid $white;
+	border-radius: 0.44em;
+
+	&:visited {
+
+		// background-color: $accent-color;
+		// color: contrast($accent-color);
+		color: inherit;
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+	
+	// background-color: (lighten($accent-color, $deviate));
+	// color: contrast(lighten($accent-color, $deviate));
+	border-color: $accent-color;
+	color: $accent-color;
+
+	}
+
+}

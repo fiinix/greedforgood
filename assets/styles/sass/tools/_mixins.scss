@@ -1,0 +1,125 @@
+/*
+ * ===========================================================================
+ *
+ * Mixins
+ *
+ * ===========================================================================
+ *
+ */
+/*
+ * Standard media query
+ */
+@mixin mq(
+          $point,
+          $IE9: false,
+          $query1: min,
+          $query2: width,
+          $context: $font-size
+  ) {
+    @if $IE9 == true {
+        .lt-ie9 & {
+            @content;
+        }
+    }
+
+    @media screen and (#{$query1}-#{$query2}: $point / $context +em) {
+      @content;
+    }
+
+}
+/*
+ * Scoped media query
+ *
+ * Look into merging this with the standard media query into 1 power query
+ */
+@mixin mq-scoped(
+          $point,
+          $point2,
+          $IE9: false,
+          $context: $font-size
+  ) {
+    @if $IE9 == true {
+        .lt-ie9 & {
+            @content;
+        }
+    }
+
+    @media screen and (min-width: $point / $context +em) and (max-width: $point2 / $context +em) {
+      @content;
+    }
+    
+}
+/*
+ * Transition
+ */
+@mixin transition(
+    $property: $transition-property-default,
+    $duration: $transition-duration-default,
+    $timing: $transition-timing-default,
+    $delay: $transition-delay-default
+    ) {
+    transition: $property $duration $timing $delay;
+}
+/*
+ * State change
+ */
+@mixin state {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+        }
+    }
+/*
+ * Columns
+ */
+@mixin columns($cols, $gutter) {
+  column-count: $cols;
+  column-gap: $gutter;
+}
+/*
+ * Vertical align v.2
+ */
+@mixin valign($position: middle) {
+        
+    position: relative;
+
+    & {
+        transform-style: preserve-3d;
+    }
+
+    @if $position == "middle" {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @else {}
+}
+/*
+ * Fetch z-index from Sass map
+ */
+@function map-has-nested-keys($map, $keys...) {
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @return false;
+    }
+    $map: map-get($map, $key);
+  }
+  
+  @return true;
+}
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+ 
+  @return $map;
+}
+
+@function z($layers...) {
+  @if not map-has-nested-keys($z-index-map, $layers...) {
+    @warn "No layer found for `#{inspect($layers...)}` in $z-index-map map. Property omitted.";
+  }
+ 
+  @return map-deep-get($z-index-map, $layers...);
+}

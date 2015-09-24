@@ -1,0 +1,26 @@
+/*
+ * ===========================================================================
+ *
+ * Columns
+ *
+ * ===========================================================================
+ *
+ */
+.smart-columns {
+
+	@include mq($breakpoint-lap) {
+
+		@include columns(2, $font-leading*2 +em);
+
+	}
+
+}
+.smart-columns--thirds {
+
+	@include mq($breakpoint-lap) {
+
+		@include columns(3, $font-leading*2 +em);
+		
+	}
+
+}

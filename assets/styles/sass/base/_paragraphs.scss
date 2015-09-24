@@ -1,0 +1,83 @@
+/*
+ * ===========================================================================
+ *
+ * Paragraphs
+ *
+ * ===========================================================================
+ *
+ */
+p {
+	
+	margin-top: 0;
+	margin-bottom: 1.5em;
+
+}
+
+
+
+.lead {
+
+	font-size: 1.25em;
+	line-height: 1.3;
+
+}
+
+
+
+.emphasise {
+
+	position: relative;
+
+	text-align: left;
+
+	padding: 1.75em 0;
+	margin: 0 0 1.5em 0;
+
+	p {
+	
+		font-size: 1.25em;
+		line-height: 1.3;
+		font-style: italic;
+		font-weight: 300;
+
+		margin-bottom: 1.2em;
+
+	}
+
+	p:last-of-type {
+
+		margin-bottom: 0;
+
+	}
+
+	&:before,
+	&:after {
+
+		content: " ";
+		display: block;
+
+		width: 5%;
+		height: 0.25em;
+
+		position: absolute;
+		left: 47.5%;
+
+		background-color: $primary-color;
+
+	}
+
+	&:before {
+
+		top: 0;
+		transform: skew(30deg, 0deg);
+
+	}
+
+	&:after {
+
+		bottom: 0;
+		transform: skew(-30deg, 0deg);
+
+	}
+
+}

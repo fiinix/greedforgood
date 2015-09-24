@@ -1,0 +1,78 @@
+/**
+ * Basil by @fiinixdesign
+ *
+ * Super minimal and hardware accelerated waypoint library
+ *
+ * @waypoints, @jquery, @basil, @plugin
+ *
+ * TODO: Clean up and simplify where possible. Make delay options into
+ * fractions based of duration settings.
+ */
+
+
+
+.basil {
+	
+	opacity: 0;
+
+	transition-property: transform, opacity;
+	transition-duration: 600ms;
+	transition-timing-function: ease-in-out;
+
+	/* Default values */
+	transform: translateY(-1em);
+	transition-delay: 0ms;
+
+	&.is-visible {
+
+		opacity: 1;
+
+		transform: translate(0);
+
+	}
+
+}
+
+
+
+/* Default origin is `top` */
+[data-basil-origin~="top"] {
+
+	transform: translateY(-1em);
+
+}
+
+[data-basil-origin~="bottom"] {
+
+	transform: translateY(1em);
+
+}
+
+[data-basil-origin~="left"] {
+
+	transform: translateX(-1em);
+
+}
+
+[data-basil-origin~="right"] {
+
+	transform: translateX(1em);
+
+}
+
+
+
+
+/* Default delay is `0ms` */
+[data-basil-delay="100"] { transition-delay: 100ms; }
+[data-basil-delay="200"] { transition-delay: 200ms; }
+[data-basil-delay="300"] { transition-delay: 300ms; }
+[data-basil-delay="400"] { transition-delay: 400ms; }
+[data-basil-delay="500"] { transition-delay: 500ms; }
+[data-basil-delay="600"] { transition-delay: 600ms; }
+[data-basil-delay="700"] { transition-delay: 700ms; }
+[data-basil-delay="800"] { transition-delay: 800ms; }
+[data-basil-delay="900"] { transition-delay: 900ms; }
+[data-basil-delay="1000"] { transition-delay: 1000ms; }
+[data-basil-delay="1100"] { transition-delay: 1100ms; }
+[data-basil-delay="1200"] { transition-delay: 1200ms; }

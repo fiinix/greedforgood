@@ -1,0 +1,91 @@
+// /*
+//  * ===========================================================================
+//  *
+//  * Alignments
+//  *
+//  * ===========================================================================
+//  *
+//  * Revise to allow for breakpoint-specific alignments
+//  *
+//  */
+// /*
+//  * Keep text left aligned until it reaches wider devices
+//  */
+// .align-left {
+// 	text-align: left;
+// }
+// .align-center {
+// 	text-align: center;
+// }
+// .align-right {
+// 	text-align: right;
+// }
+// /*
+//  * Keep on lap-sized devices
+//  */
+// .align-left-from-lap {
+// 	@include mq($breakpoint-lap) {
+// 		text-align: left;
+// 	}
+
+// }
+// .align-center-from-lap {
+// 	@include mq($breakpoint-lap) {
+// 		text-align: center;
+// 	}
+// }
+// .align-right-from-lap {
+// 	@include mq($breakpoint-lap) {
+// 		text-align: right;
+// 	}
+// }
+// /*
+//  * Keep text regardless of breakpoint
+//  */
+// .keep-left {
+// 	text-align: left;
+// }
+// .keep-center {
+// 	text-align: center;
+// }
+// .keep-right {
+// 	text-align: right;
+// }
+
+
+// /* Aligning .group
+//    ========================================================================== */
+// .group.align--center {
+
+// 	justify-content: center;
+// 	text-align: initial;
+
+// }
+
+// .group.valign {
+
+// 	&--top {
+		
+// 		justify-content: flex-start;
+
+// 	}
+
+// 	&--center {
+
+// 		justify-content: center;
+
+// 	}
+
+// 	&--bottom {
+
+// 		justify-content: flex-end;
+
+// 	}
+
+// }
+
+// .group__item.valign--center {
+
+// 	align-self: center;
+
+// }

@@ -1,0 +1,26 @@
+/*
+ * ===========================================================================
+ *
+ * Elements
+ *
+ * ===========================================================================
+ *
+ */
+small {
+	font-size:80%;
+}
+
+strong {
+    font-weight: $emphasis-weight;
+}
+
+abbr[title] {
+
+	border: 0;
+
+	font-size: 0.78em;
+	line-height: 1.79;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+
+}

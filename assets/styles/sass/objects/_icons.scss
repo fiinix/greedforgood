@@ -1,0 +1,18 @@
+/*
+ * ===========================================================================
+ *
+ * Icons
+ *
+ * ===========================================================================
+ *
+ */
+
+[class^="icon"] {
+	@extend %icon;
+}
+
+.icon-twitter:before { @extend %icon-twitter; }
+.icon-googleplus:before { @extend %icon-googleplus; }
+.icon-pinterest:before { @extend %icon-pinterest; }
+.icon-linkedin:before { @extend %icon-linkedin; }
+.icon-instagram:before { @extend %icon-instagram; }

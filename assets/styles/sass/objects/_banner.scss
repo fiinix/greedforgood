@@ -1,0 +1,90 @@
+/*
+ * ===========================================================================
+ *
+ * Banner
+ *
+ * ===========================================================================
+ *
+ */
+.banner {
+
+	background-color: #f3f3f3;
+	color: $white;
+	
+	padding: 3em 0;
+
+	.group {
+
+		position: relative;
+		z-index: z("banner", "content");
+
+	}
+
+	&:hover {
+
+		.banner__diamond {
+
+			transform: scaleX(1.5) skew(-20deg, 0deg);
+			@include transition($duration: 300ms);
+
+		}
+
+	}
+
+	&__diamond {
+
+		width: 20em;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 15em;
+
+		z-index: z("banner", "diamond");
+
+		background-color: rgba($primary-color, 0.9);
+		transform: skew(-30deg, 0deg);
+
+		@include transition($duration: 300ms, $delay: 600ms);
+
+		@include mq($breakpoint-lap) {
+
+			left: auto;
+			right: 15em;
+
+		};
+
+	}
+
+}
+
+.banner-w-overlay {
+
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	color: contrast($black);
+
+	position: relative;
+	z-index: z("banner", "base");
+
+	&:before {
+
+		content: " ";
+		display: block;
+
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		background-color: rgba($black, 0.5);
+
+		z-index: z("banner", "overlay");
+
+	}
+
+}
