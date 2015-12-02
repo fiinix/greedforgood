@@ -21,6 +21,12 @@
 	justify-content: center;
 	align-items: center;
 
+	// scroll-snap-coordinate: 0% 0%;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
 	position: relative;
 	// z-index: z("banner", "base");
 

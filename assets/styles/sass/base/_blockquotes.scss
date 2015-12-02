@@ -42,15 +42,15 @@ blockquote {
 
 		content: open-quote;
 		position: absolute;
-		top: 0.55em;
-		left: -0.5em;
-		font-family: 'Georgia';
+		top: 0.525em;
+		left: -0.55em;
+		// font-family: 'Georgia';
 
 	}
 	p:last-of-type:after {
 
 		content: close-quote;
-		font-family: 'Georgia';
+		// font-family: 'Georgia';
 
 	}
 

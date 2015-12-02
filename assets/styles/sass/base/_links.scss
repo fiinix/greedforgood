@@ -11,7 +11,7 @@ a {
 	color: inherit;
 	text-decoration: none;
 
-	border-bottom: 1px solid;
+	border-bottom: 1px solid currentColor;
 
 	&:visited {
 
@@ -25,7 +25,8 @@ a {
 	&:focus,
 	&:active {
 
-		color: lighten($primary-color, $deviate);
+		color: hsl(155,87%,28%);
+		border-color: transparent;
 
 	}
 }

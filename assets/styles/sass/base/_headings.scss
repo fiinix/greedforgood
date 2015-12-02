@@ -6,6 +6,16 @@
  * ===========================================================================
  *
  */
+
+
+@font-face {
+	font-family: "Cooper Hewitt";
+	src: url('#{$font-path}cooperhewitt-heavy-subset.woff') format('woff');
+	font-style: normal;
+	font-weight: 800;
+}
+
+
 /*
  * Double-stranded headings, use class names when you wish to replicate the
  * visual aestethic of e.g. H1 without disrupting the document hierarchy.
@@ -18,12 +28,12 @@ h1, h2, h3, h4, h5, h6,
 	font-weight: $heading-weight;
 	font-family: $heading-family;
 	line-height: 1.2;
-	letter-spacing: -0.01em;
+	letter-spacing: -0.02em;
 
 	color: $primary-color;
 
 	margin: 0;
-	margin-bottom: 0.5em;
+	margin-bottom: 1rem;
 
 }
 
@@ -39,6 +49,9 @@ h1,
 
 		font-size: 3em;
 		line-height: 1.1;
+
+		// font-size: 3.375em;
+    	// line-height: 1.10668;
 
 	};
 	
