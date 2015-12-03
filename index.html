@@ -2623,7 +2623,7 @@
 	var code = (e.keyCode ? e.keyCode : e.which);
 	var sections = ['cover', 'toc', 'intro', 'title', 'fail', 'greed', 'smith', 'smith2', 'accessibility', 'world', 'smith3', 'uk', 'fuck', 'smith4', 'uk2', 'presbyopia', 'oliver', 'toolate', 'smith5', 'greed2', 'closing', 'references'];
 
-	// if(code == 34 || code == 33 || code == 45 || code == 98) {
+	if(code == 34) {
 		var currentSection = window.location.hash.substring(1);
 		var url = location.href;
 
@@ -2693,7 +2693,7 @@
 			default:
 				location.href= "#intro";
 		}
-	// }
+	}
 	// else {
 		// alert(code);
 	// }
